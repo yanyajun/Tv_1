@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "tv.dfyc.yckt"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 5
+        versionName "1.5.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'libs' //this way we can find the .aar file in libs folder
+        }
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    buildToolsVersion '25.0.0'
+}
+
+dependencies {
+    compile files('libs/AuthClient_v1.0.3.jar')
+    compile files('libs/DevInfoManager.jar')
+    testCompile 'junit:junit:4.12'
+    compile project(':androidtvwidget')
+    compile project(':jcvideoplayer-lib')
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile project(':jjdxm-ijkplayer')
+    compile(name: 'ijkplayer-java-release',ext: 'aar')
+    //    根据需要支持去拓展，在jjdxm-ijkplayer中默认加入了armv7a的了
+    //compile 'com.dou361.ijkplayer-armv7a:jjdxm-ijkplayer-armv7a:0.8.3'
+//    compile 'com.dou361.ijkplayer-armv5:jjdxm-ijkplayer-armv5:1.0.0'
+//    compile 'com.dou361.ijkplayer-arm64:jjdxm-ijkplayer-arm64:1.0.0'
+    //compile 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.3'
+//    compile 'com.dou361.ijkplayer-x86_64:jjdxm-ijkplayer-x86_64:1.0.0'
+}

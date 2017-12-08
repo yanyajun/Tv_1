@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/w_741"
+        android:layout_height="@dimen/h_584"
+        android:background="@drawable/feedback_commit">
+
+        <TextView
+            android:id="@+id/commit_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交成功"
+            android:textSize="@dimen/h_50"
+            android:textColor="#ffe400"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_261"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_269"/>
+
+        <TextView
+            android:id="@+id/commit_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="非常感谢您的宝贵意见，我们将不断改进产品，带给您更优质的体验！"
+            android:textSize="@dimen/h_32"
+            android:textColor="#f1f1f1"
+            android:lineSpacingExtra="@dimen/h_26"
+            android:layout_below="@+id/commit_success"
+            android:layout_marginTop="@dimen/h_17"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_63"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_64"/>
+
+        <Button
+            android:id="@+id/commitOK"
+            android:layout_width="@dimen/w_227"
+            android:layout_height="@dimen/h_71"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_41"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_257"
+            android:layout_centerInParent="true"
+            android:text="确认"
+            android:textSize="@dimen/h_35"
+            android:textColor="@color/black"
+            android:background="@drawable/pop_dialog_button_selected"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

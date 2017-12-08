@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent">
+
+        <RelativeLayout
+            android:id="@+id/popBackground"
+            android:layout_width="@dimen/w_1194"
+            android:layout_height="@dimen/h_920"
+            android:background="@drawable/order_success"
+            android:layout_centerInParent="true">
+
+                <TextView
+                    android:id="@+id/popText"
+                    android:layout_width="@dimen/w_550"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/h_40"
+                    android:textColor="#f1f1f1"
+                    android:layout_marginTop="@dimen/h_596"
+                    android:text="订购成功"
+                    android:layout_centerHorizontal="true"/>
+
+                <Button
+                    android:id="@+id/popOK"
+                    android:layout_width="@dimen/w_191"
+                    android:layout_height="@dimen/h_71"
+                    android:background="@drawable/pop_dialog_button_selected"
+                    android:text="确定"
+                    android:textSize="@dimen/h_35"
+                    android:typeface="sans"
+                    android:textColor="@color/black"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="@dimen/w_485"
+                    android:layout_marginBottom="@dimen/h_100"/>
+        </RelativeLayout>
+</LinearLayout>

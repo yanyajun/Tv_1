@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--&lt;!&ndash; 实心 &ndash;&gt;-->
+    <!--<solid-->
+        <!--android:color="#3dafd5"-->
+        <!--android:width="@dimen/w_29"-->
+        <!--android:height="@dimen/h_24"/>-->
+    <!--&lt;!&ndash; 圆角 &ndash;&gt;-->
+    <!--<corners android:radius="@dimen/h_6"/>-->
+
+    <size
+        android:height="@dimen/w_29"
+        android:width="@dimen/h_24" />
+    <stroke
+        android:width="5dp"
+        android:color="#3dafd5" />
+    <corners
+        android:radius="@dimen/h_8" />
+    <solid android:color="#3dafd5"/>
+
+</shape>

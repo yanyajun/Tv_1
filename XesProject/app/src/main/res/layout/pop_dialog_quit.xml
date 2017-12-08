@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/h_397"
+    android:layout_marginLeft="@dimen/w_538">
+
+        <RelativeLayout
+
+            android:layout_width="@dimen/w_952"
+            android:layout_height="@dimen/h_422"
+            >
+
+                <ImageView
+                    android:id="@+id/quit_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+                <Button
+                    android:id="@+id/popOK"
+                    android:layout_width="@dimen/w_190"
+                    android:layout_height="@dimen/h_64"
+                    android:background="@drawable/quit_ok"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/h_174"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/w_78"
+                    android:text="退出不学了"
+                    android:textSize="@dimen/h_30"
+                    android:typeface="sans"
+                    android:textColor="#000000"/>
+
+                <Button
+                    android:id="@+id/popCancel"
+                    android:layout_width="@dimen/w_190"
+                    android:layout_height="@dimen/h_64"
+                    android:background="@drawable/quit_ok"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="@dimen/h_174"
+                    android:layout_toRightOf="@+id/popOK"
+                    android:layout_marginLeft="@dimen/w_40"
+                    android:text="再学一会"
+                    android:textSize="@dimen/h_30"
+                    android:typeface="sans"
+                    android:textColor="#000000"/>
+
+
+        </RelativeLayout>
+
+
+
+</RelativeLayout>

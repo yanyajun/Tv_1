@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ask_background">
+
+    <TextView
+        android:id="@+id/ask_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="咨询热线：400-650-1816"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_81"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_61"
+        android:textSize="@dimen/h_29"
+        android:textColor="#f1f1f1"/>
+
+    <RelativeLayout
+        android:layout_width="@dimen/w_1607"
+        android:layout_height="@dimen/h_928"
+        android:background="@drawable/popble"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_161"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_136"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_9"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_176">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_54"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_707"
+            android:text="咨询与建议"
+            android:textColor="#af2f23"
+            android:textSize="@dimen/w_50"/>
+
+        <TextView
+            android:id="@+id/ask_beginning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="@dimen/h_25"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_338"
+            android:text="尊敬的用户："
+            android:textColor="#333333"
+            android:textSize="@dimen/w_40"/>
+
+        <TextView
+            android:id="@+id/ask_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ask_beginning"
+            android:layout_marginTop="@dimen/h_20"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_338"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_252"
+            android:text=""
+            android:lineSpacingExtra="@dimen/w_20"
+            android:textColor="#333333"
+            android:textSize="@dimen/w_34"/>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/feedback_recyclerview"
+            android:focusable="true"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_359"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_315"
+            android:layout_below="@+id/ask_content"
+            android:layout_marginTop="@dimen/h_23"
+            android:layout_height="@dimen/h_270"
+            android:layout_centerHorizontal="true"/>
+
+        <LinearLayout
+            android:id="@+id/commit"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_width="@dimen/w_174"
+            android:layout_height="@dimen/h_81"
+            android:background="@drawable/feedback_button_selector"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_605"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_209">
+
+            <ImageView
+                android:layout_width="@dimen/w_162"
+                android:layout_height="@dimen/h_69"
+                android:layout_gravity="center"
+                android:background="@drawable/commit"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/back"
+            android:orientation="horizontal"
+            android:focusable="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:layout_width="@dimen/w_174"
+            android:layout_height="@dimen/h_81"
+            android:background="@drawable/feedback_button_selector"
+            android:layout_toRightOf="@+id/commit"
+            android:layout_marginLeft="@dimen/w_120"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_209">
+
+            <ImageView
+                android:layout_width="@dimen/w_162"
+                android:layout_height="@dimen/h_69"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/back"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:id="@+id/feedback_upview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/record_layout"
+    android:layout_width="@dimen/w_264"
+    android:layout_height="@dimen/h_364"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <tv.dfyc.yckt.custom.RoundImageView
+        android:id="@+id/record_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/load_detail"
+        app:x_radius="@dimen/w_8"
+        app:y_radius="@dimen/h_8"/>
+
+    <com.open.androidtvwidget.view.LabelView
+        xmlns:lv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/w_5"
+        android:paddingRight="@dimen/w_5"
+        lv:lv_background_color="@color/red"
+        lv:lv_fill_triangle="true"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_text="免费"
+        lv:lv_text_size="@dimen/w_23"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/record_detail_charge"
+        android:layout_width="@dimen/w_97"
+        android:layout_height="@dimen/h_97"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/free"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:id="@+id/little_record_mask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#90061e2d">
+
+        <TextView
+            android:id="@+id/little_record_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="小学语文第一张"
+            android:textColor="#ffffff"
+            android:maxLines="1"
+            android:textSize="@dimen/h_27"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_11"
+            android:paddingTop="@dimen/h_12"
+            android:paddingBottom="@dimen/h_14"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/record_layout_mask"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000">
+
+        <ImageView
+            android:id="@+id/record_delete"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="@dimen/w_48"
+            android:layout_height="@dimen/w_48"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/little_delete"/>
+
+    </RelativeLayout>
+</RelativeLayout>

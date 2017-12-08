@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background">
+
+    <ImageView
+        android:layout_width="@dimen/w_228"
+        android:layout_height="@dimen/h_67"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/first_page_logo_left"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginTop="@dimen/w_40"/>
+
+    <include layout="@layout/timedate"/>
+
+    <LinearLayout
+        android:id="@+id/split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_marginTop="@dimen/h_114"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginRight="@dimen/w_80"
+        android:background="#ffffff"
+        android:alpha="0.2">
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/left_item"
+        android:layout_width="@dimen/w_463"
+        android:layout_height="@dimen/h_850"
+        android:layout_below="@+id/split"
+        android:layout_marginTop="@dimen/h_42"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_111">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:alpha="0.3">
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/left_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/h_77"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_48"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_48">
+
+            <ImageView
+                android:id="@+id/left_image"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/w_36"
+                android:layout_height="@dimen/h_36"
+                android:src="@drawable/search_image"/>
+
+            <EditText
+                android:id="@+id/left_editText"
+                android:layout_marginLeft="@dimen/w_25"
+                android:hint="输入搜索首字母"
+                android:textSize="@dimen/h_32"
+                android:textColor="#ffffff"
+                android:alpha="0.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/left_split"
+            android:layout_below="@+id/left_layout"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_2"
+            android:layout_marginTop="@dimen/h_19"
+            android:layout_marginLeft="@dimen/w_40"
+            android:layout_marginRight="@dimen/w_40"
+            android:background="#f1f1f1"
+            android:alpha="0.3">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/w_20"
+            android:layout_below="@+id/left_split"
+            android:layout_marginTop="@dimen/h_35"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_57"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_56"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_note"
+            android:layout_marginTop="@dimen/h_23"
+            android:layout_marginLeft="@dimen/w_47"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent">
+
+            <com.open.androidtvwidget.keyboard.SkbContainer
+                android:id="@+id/skbContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </com.open.androidtvwidget.keyboard.SkbContainer>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/search_title"
+        android:layout_below="@+id/split"
+        android:layout_marginTop="@dimen/h_51"
+        android:layout_toRightOf="@+id/left_item"
+        android:layout_marginLeft="@dimen/w_78"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="热门搜索"
+        android:textSize="@dimen/w_34"
+        android:textColor="#ffffff"/>
+
+    <RelativeLayout
+        android:id="@+id/hot_search"
+        android:layout_below="@+id/search_title"
+        android:layout_marginTop="@dimen/h_79"
+        android:layout_toRightOf="@+id/left_item"
+        android:layout_marginLeft="@dimen/w_98"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_88"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/hot_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <com.open.androidtvwidget.view.MainUpView
+            android:id="@+id/guess_search_upview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/no_result"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_309"
+        android:layout_toRightOf="@+id/left_item"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/no_result"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_28"
+            android:text="对不起暂时没有搜索到您要的内容~"
+            android:layout_marginTop="@dimen/h_34"
+            android:layout_gravity="center_horizontal"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/guess_like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/split"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_42"
+        android:layout_marginTop="@dimen/h_505"
+        android:layout_toRightOf="@+id/left_item"
+        android:layout_marginLeft="@dimen/w_59">
+
+        <TextView
+            android:id="@+id/guess_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_7"
+            android:text="猜你喜欢"
+            android:textSize="@dimen/w_34"
+            android:textColor="#ffffff"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_2"
+            android:layout_below="@+id/guess_text"
+            android:layout_marginTop="@dimen/h_17"
+            android:layout_alignParentLeft="true"
+            android:background="#f1f1f1"
+            android:alpha="0.3">
+
+        </LinearLayout>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/guess_like_list"
+            android:layout_below="@+id/guess_text"
+            android:layout_marginTop="@dimen/h_17"
+            android:layout_marginBottom="@dimen/h_20"
+            android:paddingLeft="@dimen/w_20"
+            android:paddingRight="@dimen/w_20"
+            android:layout_alignParentLeft="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <com.open.androidtvwidget.view.MainUpView
+            android:id="@+id/guess_like_upview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_result"
+        android:visibility="gone"
+        android:layout_below="@+id/search_title"
+        android:layout_marginTop="@dimen/h_6"
+        android:layout_toRightOf="@+id/left_item"
+        android:layout_marginLeft="@dimen/w_60"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/tmp_layout"
+            android:layout_marginTop="@dimen/h_6"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_200"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_width="20px"
+            android:layout_height="match_parent"
+            android:focusable="false"
+            android:focusableInTouchMode="true">
+
+        </RelativeLayout>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/search_result_list"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_20"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_25"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_70"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_43"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <LinearLayout
+            android:id="@+id/search_scroll_bg"
+            android:layout_width="@dimen/w_10"
+            android:layout_height="@dimen/h_742"
+            android:orientation="vertical"
+            android:background="@drawable/list_page_scroll_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_40"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_25">
+
+            <View
+                android:id="@+id/search_scroll_bar"
+                android:layout_width="@dimen/w_10"
+                android:layout_height="@dimen/h_200"
+                android:background="@drawable/list_page_scroll_bar"/>
+
+        </LinearLayout>
+
+        <com.open.androidtvwidget.view.MainUpView
+            android:id="@+id/search_result_upview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/pageText"
+            android:text=""
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_33"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_79"
+            android:textSize="@dimen/h_27"
+            android:textColor="#ffe476"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

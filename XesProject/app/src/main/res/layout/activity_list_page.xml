@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/search_background">
+
+    <include
+        android:id="@+id/list_page_titlebar_time"
+        layout="@layout/titlebar_time_right"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/list_page_titlebar_time"
+        android:layout_marginLeft="@dimen/w_79"
+        android:layout_marginRight="@dimen/w_62">
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/list_page_grade_recycler"
+            android:layout_width="@dimen/w_236"
+            android:layout_height="@dimen/h_776"
+            android:layout_marginTop="@dimen/h_80"
+            android:nextFocusRight="@+id/list_page_lesson_recycler">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <View
+            android:id="@+id/list_page_vertical_line"
+            android:layout_width="@dimen/w_2"
+            android:layout_height="@dimen/h_787"
+            android:background="#5f5d73"
+            android:layout_toRightOf="@+id/list_page_grade_recycler"
+            android:layout_marginTop="@dimen/h_70"/>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/list_page_lesson_recycler"
+            android:layout_width="@dimen/w_160"
+            android:layout_height="@dimen/h_776"
+            android:layout_marginLeft="@dimen/w_10"
+            android:layout_toRightOf="@+id/list_page_vertical_line"
+            android:layout_marginTop="@dimen/h_80">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/list_page_lesson_recycler"
+            android:layout_marginLeft="@dimen/w_10"
+            android:layout_marginBottom="@dimen/h_68"
+            android:layout_marginTop="@dimen/h_20">
+
+            <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+                android:id="@+id/list_page_detail_recycler"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h_800"
+                android:paddingLeft="@dimen/w_20"
+                android:layout_marginTop="@dimen/h_20"
+                android:paddingRight="@dimen/w_20">
+
+            </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_30"
+                android:layout_marginTop="@dimen/h_31"
+                android:layout_alignParentBottom="true">
+
+                <ImageView
+                    android:id="@+id/message_image"
+                    android:layout_width="@dimen/w_37"
+                    android:layout_height="@dimen/h_32"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/first_page_message"/>
+
+                <tv.dfyc.yckt.custom.MarqueeTextView
+                    android:id="@+id/message_text"
+                    android:layout_width="@dimen/w_957"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/h_28"
+                    android:typeface="sans"
+                    android:singleLine="true"
+                    android:ellipsize="marquee"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:layout_toRightOf="@+id/message_image"
+                    android:paddingLeft="@dimen/w_18"/>
+
+
+                <TextView
+                    android:id="@+id/page_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="共--部"
+                    android:textSize="@dimen/h_27"
+                    android:textColor="#e4cb68"
+                    android:singleLine="true"/>
+
+
+            </RelativeLayout>
+
+            <com.open.androidtvwidget.view.MainUpView
+                android:id="@+id/primary_detail_upview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/scroll_bg"
+        android:layout_width="@dimen/w_10"
+        android:layout_height="@dimen/h_742"
+        android:orientation="vertical"
+        android:background="@drawable/list_page_scroll_bg"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/h_180"
+        android:layout_marginRight="@dimen/w_50">
+
+        <View
+            android:id="@+id/scroll_bar"
+            android:layout_width="@dimen/w_10"
+            android:layout_height="@dimen/h_200"
+            android:background="@drawable/list_page_scroll_bar"/>
+
+    </LinearLayout>
+</RelativeLayout>

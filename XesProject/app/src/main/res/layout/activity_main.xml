@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_bg_v2">
+
+    <FrameLayout
+        android:id="@+id/logo_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:focusable="false"
+            android:layout_width="@dimen/w_228"
+            android:layout_height="@dimen/h_67"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_40"
+            android:layout_marginLeft="@dimen/w_80"
+            android:background="@drawable/first_page_logo_left"/>
+
+        <TextView
+            android:id="@+id/theme_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="专题"
+            android:textSize="@dimen/w_40"
+            android:textColor="#f1f1f1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_80"
+            android:layout_marginTop="@dimen/w_40"
+            android:focusable="false"
+            android:visibility="gone"/>
+    </FrameLayout>
+
+    <com.open.androidtvwidget.view.RelativeMainLayout
+        android:id="@+id/first_page_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w_501"
+        android:paddingBottom="@dimen/h_10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:layout_marginRight="@dimen/w_528"
+            android:layout_marginTop="@dimen/h_40">
+
+            <TextView
+                android:id="@+id/date"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/h_28"
+                android:text="11/13"
+                android:textColor="#f1f1f1"
+                android:layout_marginTop="@dimen/h_5"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/w_44"
+                android:layout_marginLeft="@dimen/w_21"
+                android:text="15:30"
+                android:textColor="#f1f1f1" />
+
+            <TextView
+                android:id="@+id/week"
+                android:focusable="false"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/h_28"
+                android:layout_marginLeft="@dimen/w_20"
+                android:text="星期五"
+                android:textColor="#f1f1f1"
+                android:layout_marginTop="@dimen/h_5"/>
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/first_page_button_search"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/w_56"
+            android:layout_height="@dimen/h_56"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginRight="@dimen/h_120"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:background="@drawable/first_page_search"
+            android:nextFocusLeft="@+id/first_page_button_search"
+            android:nextFocusDown="@+id/first_page_button_senior"/>
+
+        <ImageButton
+            android:id="@+id/first_page_button_product"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/w_56"
+            android:layout_height="@dimen/h_56"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginRight="@dimen/h_40"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:background="@drawable/first_page_product"
+            android:nextFocusRight="@+id/first_page_button_product"
+            android:nextFocusDown="@+id/first_page_button_senior"/>
+
+        <TextView
+            android:id="@+id/logo_right"
+            android:focusable="false"
+            android:layout_width="@dimen/w_204"
+            android:layout_height="@dimen/h_53"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_79"
+            android:layout_marginTop="@dimen/h_48"
+            android:background="@drawable/first_page_logo_right"/>
+
+    </com.open.androidtvwidget.view.RelativeMainLayout>
+
+    <com.open.androidtvwidget.view.RelativeMainLayout
+        android:id="@+id/first_page_layout_ages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo_layout">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/h_30">
+
+            <Button
+                android:id="@+id/first_page_button_primary"
+                android:layout_width="@dimen/w_153"
+                android:layout_height="@dimen/h_65"
+                android:text="小学"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_alignParentLeft="true"
+                android:nextFocusLeft="@+id/first_page_button_primary"
+                android:nextFocusRight="@+id/first_page_button_junior"
+                android:nextFocusDown="@+id/first_page_recommend_00"
+                android:nextFocusUp="@+id/first_page_button_search"
+                android:background="@drawable/first_page_white_round_border" />
+
+            <Button
+                android:id="@+id/first_page_button_junior"
+                android:layout_width="@dimen/w_153"
+                android:layout_height="@dimen/h_65"
+                android:text="初中"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/first_page_button_primary"
+                android:layout_marginLeft="@dimen/w_20"
+                android:background="@drawable/first_page_white_round_border"
+                android:nextFocusLeft="@+id/first_page_button_primary"
+                android:nextFocusDown="@+id/first_page_recommend_00"
+                android:nextFocusUp="@+id/first_page_button_search"/>
+
+            <Button
+                android:id="@+id/first_page_button_senior"
+                android:layout_width="@dimen/w_153"
+                android:layout_height="@dimen/h_65"
+                android:text="高中"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@+id/first_page_button_junior"
+                android:layout_marginLeft="@dimen/w_20"
+                android:nextFocusLeft="@+id/first_page_button_junior"
+                android:nextFocusRight="@+id/first_page_button_senior"
+                android:nextFocusDown="@+id/first_page_recommend_00"
+                android:background="@drawable/first_page_white_round_border"
+                android:nextFocusUp="@+id/first_page_button_search" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/first_page_text_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订购"
+            android:textSize="@dimen/h_30"
+            android:typeface="sans"
+            android:textColor="@color/white"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_320"
+            android:layout_marginTop="@dimen/h_12"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/first_page_text_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="搜索"
+            android:textSize="@dimen/h_30"
+            android:typeface="sans"
+            android:textColor="@color/white"
+            android:layout_toLeftOf="@+id/first_page_text_product"
+            android:layout_marginRight="@dimen/w_20"
+            android:layout_marginTop="@dimen/h_12"
+            android:visibility="invisible"/>
+
+    </com.open.androidtvwidget.view.RelativeMainLayout>
+
+    <com.open.androidtvwidget.view.RelativeMainLayout
+        android:id="@+id/first_page_recommend_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/first_page_layout_ages"
+        android:paddingTop="@dimen/h_20">
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_00"
+            android:layout_width="@dimen/w_530"
+            android:layout_height="@dimen/h_408"
+            android:layout_marginLeft="@dimen/w_80"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/first_page_recommend_00_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_10"
+                app:y_radius="@dimen/h_10"/>
+
+            <TextView
+                android:id="@+id/first_page_recommend_00_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="小学语文第一张"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_23"
+                android:paddingTop="@dimen/h_12"
+                android:paddingBottom="@dimen/h_14"
+                android:background="@drawable/first_page_text_round_bg"
+                android:paddingLeft="@dimen/w_30"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_10"
+            android:layout_width="@dimen/w_260"
+            android:layout_height="@dimen/h_92"
+            android:layout_marginLeft="@dimen/w_80"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_below="@+id/first_page_recommend_00"
+            android:layout_marginTop="@dimen/h_22"
+            android:background="#676cda">
+
+            <ImageView
+                android:id="@+id/first_page_person_image"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/h_55"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/w_28"
+                android:background="@drawable/first_page_person"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="用户中心"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/first_page_person_image"
+                android:layout_marginLeft="@dimen/w_28"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_11"
+            android:layout_width="@dimen/w_260"
+            android:layout_height="@dimen/h_92"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_below="@+id/first_page_recommend_00"
+            android:layout_toRightOf="@+id/first_page_recommend_10"
+            android:layout_marginLeft="@dimen/w_11"
+            android:layout_marginTop="@dimen/w_22"
+            android:background="#676cda">
+
+            <ImageView
+                android:id="@+id/first_page_person_feedback"
+                android:layout_width="@dimen/w_55"
+                android:layout_height="@dimen/h_55"
+                android:layout_marginLeft="@dimen/w_28"
+                android:layout_centerVertical="true"
+                android:background="@drawable/first_page_feedback"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="建议反馈"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/first_page_person_feedback"
+                android:layout_marginLeft="@dimen/w_28"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_01"
+            android:layout_width="@dimen/w_381"
+            android:layout_height="@dimen/h_523"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/first_page_recommend_00"
+            android:layout_marginLeft="@dimen/w_30">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/first_page_recommend_01_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_10"
+                app:y_radius="@dimen/h_10"/>
+
+            <TextView
+                android:id="@+id/first_page_recommend_01_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="小学语文第一张"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_23"
+                android:paddingTop="@dimen/h_12"
+                android:paddingBottom="@dimen/h_14"
+                android:background="@drawable/first_page_text_round_bg"
+                android:paddingLeft="@dimen/w_30"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_02"
+            android:layout_width="@dimen/w_371"
+            android:layout_height="@dimen/h_253"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/first_page_recommend_01"
+            android:layout_marginLeft="@dimen/w_31">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/first_page_recommend_02_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_10"
+                app:y_radius="@dimen/h_10"/>
+
+            <TextView
+                android:id="@+id/first_page_recommend_02_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="小学语文第一张"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_23"
+                android:paddingTop="@dimen/h_12"
+                android:paddingBottom="@dimen/h_14"
+                android:background="@drawable/first_page_text_round_bg_less"
+                android:paddingLeft="@dimen/w_30"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_12"
+            android:layout_width="@dimen/w_371"
+            android:layout_height="@dimen/h_253"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_below="@+id/first_page_recommend_02"
+            android:layout_marginTop="@dimen/h_22"
+            android:layout_toRightOf="@+id/first_page_recommend_01"
+            android:layout_marginLeft="@dimen/w_31">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/first_page_recommend_12_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_10"
+                app:y_radius="@dimen/h_10"/>
+
+            <TextView
+                android:id="@+id/first_page_recommend_12_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="小学语文第一张"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_23"
+                android:paddingTop="@dimen/h_12"
+                android:paddingBottom="@dimen/h_14"
+                android:background="@drawable/first_page_text_round_bg_less"
+                android:paddingLeft="@dimen/w_30"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/first_page_recommend_03"
+            android:layout_width="@dimen/w_381"
+            android:layout_height="@dimen/h_523"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/first_page_recommend_02"
+            android:layout_marginLeft="@dimen/w_33"
+            android:layout_marginRight="@dimen/w_80">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/first_page_recommend_03_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_10"
+                app:y_radius="@dimen/h_10"/>
+
+            <TextView
+                android:id="@+id/first_page_recommend_03_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:text="小学语文第一张"
+                android:maxLines="1"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_23"
+                android:paddingTop="@dimen/h_12"
+                android:paddingBottom="@dimen/h_14"
+                android:background="@drawable/first_page_text_round_bg"
+                android:paddingLeft="@dimen/w_30"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <com.open.androidtvwidget.view.RelativeMainLayout
+            android:id="@+id/first_page_bottom_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_page_recommend_10"
+            android:layout_marginTop="@dimen/h_39"
+            android:layout_marginLeft="@dimen/w_80"
+            android:layout_marginRight="@dimen/w_80">
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect1"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect1_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect2"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect1"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect2_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect3"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect2"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect3_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect4"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect3"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect4_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect5"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect4"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect5_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect6"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect5"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect6_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+            <com.open.androidtvwidget.view.ReflectItemView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/first_page_recommend_reflect7"
+                android:nextFocusDown="@+id/bottom"
+                android:nextFocusUp="@+id/search_linear"
+                android:layout_width="@dimen/w_229"
+                android:layout_height="@dimen/h_131"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                app:isReflect="true"
+                app:isShape="true"
+                app:reflect_height="@dimen/h_45"
+                app:refle_spacing="@dimen/h_7"
+                android:layout_toRightOf="@+id/first_page_recommend_reflect6"
+                android:layout_marginLeft="@dimen/w_29">
+
+                <tv.dfyc.yckt.custom.RoundImageView
+                    android:id="@+id/first_page_recommend_reflect7_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/load_detail"
+                    app:x_radius="@dimen/w_5"
+                    app:y_radius="@dimen/h_5"/>
+
+            </com.open.androidtvwidget.view.ReflectItemView>
+
+        </com.open.androidtvwidget.view.RelativeMainLayout>
+
+        <com.open.androidtvwidget.view.RelativeMainLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/first_page_bottom_layout"
+            android:layout_marginTop="@dimen/h_50"
+            android:layout_marginLeft="@dimen/w_456"
+            android:layout_marginRight="@dimen/w_462">
+
+            <ImageView
+                android:id="@+id/first_page_message_image"
+                android:layout_width="@dimen/w_37"
+                android:layout_height="@dimen/h_32"
+                android:layout_centerVertical="true"
+                android:background="@drawable/first_page_message"/>
+
+            <tv.dfyc.yckt.custom.MarqueeTextView
+                android:id="@+id/first_page_message_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/h_28"
+                android:typeface="sans"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:scrollHorizontally="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_toRightOf="@+id/first_page_message_image"
+                android:paddingLeft="@dimen/w_18"/>
+
+        </com.open.androidtvwidget.view.RelativeMainLayout>
+
+    </com.open.androidtvwidget.view.RelativeMainLayout>
+
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:id="@+id/mainUpView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:upImageRes="@drawable/yellow_white_border" />
+
+    <RelativeLayout
+        android:id="@+id/splash_layout"
+        android:layout_width="@dimen/w_1920"
+        android:layout_height="@dimen/h_1080"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/splash_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/splash_text"
+            android:layout_width="@dimen/w_100"
+            android:layout_height="@dimen/h_50"
+            android:gravity="center"
+            android:text="10s"
+            android:background="@color/white"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

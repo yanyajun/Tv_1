@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background">
+
+    <TextView
+        android:id="@+id/personal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="个人中心"
+        android:textSize="@dimen/w_40"
+        android:textColor="#f1f1f1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginTop="@dimen/w_40"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/h_80"
+        android:layout_marginTop="@dimen/h_40">
+
+        <TextView
+            android:id="@+id/date"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h_28"
+            android:text="--/--"
+            android:textColor="#f1f1f1"
+            android:layout_marginTop="@dimen/h_5"/>
+
+        <TextView
+            android:id="@+id/time"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/w_44"
+            android:layout_marginLeft="@dimen/w_21"
+            android:text="--:--"
+            android:textColor="#f1f1f1" />
+
+        <TextView
+            android:id="@+id/week"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h_28"
+            android:layout_marginLeft="@dimen/w_20"
+            android:text="星期五"
+            android:textColor="#f1f1f1"
+            android:layout_marginTop="@dimen/h_5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/personal_split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_below="@+id/personal"
+        android:layout_marginTop="@dimen/h_30"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginRight="@dimen/w_80"
+        android:background="#ffffff"
+        android:alpha="0.2">
+
+    </LinearLayout>
+
+    <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+        android:id="@+id/personal_info_list"
+        android:layout_width="@dimen/w_240"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_102"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_227"
+        android:layout_centerHorizontal="true"
+        android:focusable="false">
+    </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+    <RelativeLayout
+        android:id="@+id/view_record"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_148"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_472">
+
+        <RelativeLayout
+            android:id="@+id/view_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/view_record_delete"
+                android:visibility="gone"
+                android:layout_width="@dimen/w_148"
+                android:layout_height="@dimen/h_51"
+                android:text="删除"
+                android:textColor="@color/search_text_selector"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_222"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/delete_button_selector"
+                android:textSize="@dimen/h_27"/>
+
+            <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+                android:id="@+id/view_record_recycler_view"
+                android:layout_below="@+id/view_record_delete"
+                android:layout_marginTop="@dimen/h_23"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/w_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_203"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h_43"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+            <LinearLayout
+                android:id="@+id/view_scroll_bg"
+                android:layout_width="@dimen/w_10"
+                android:layout_height="@dimen/h_742"
+                android:orientation="vertical"
+                android:background="@drawable/list_page_scroll_bg"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_119"
+                android:layout_below="@+id/view_record_delete"
+                android:layout_marginTop="@dimen/h_43">
+
+                <View
+                    android:id="@+id/view_scroll_bar"
+                    android:layout_width="@dimen/w_10"
+                    android:layout_height="@dimen/h_200"
+                    android:background="@drawable/list_page_scroll_bar"/>
+
+            </LinearLayout>
+
+
+            <com.open.androidtvwidget.view.MainUpView
+                android:id="@+id/view_record_upview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/view_record_pageText"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h_36"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_79"
+                android:textSize="@dimen/h_27"
+                android:textColor="#ffe476"/>
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/view_no_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_305"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/h_392"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/tmp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="@dimen/w_207"
+                android:layout_height="@dimen/h_147"
+                android:focusable="false"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/view_and_collect"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您还没有观看过任何课程，赶快去学习吧~!"
+                android:textColor="#ffffff"
+                android:paddingTop="@dimen/h_33"
+                android:textSize="@dimen/h_26"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/collect_record"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_148"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_472">
+
+        <RelativeLayout
+            android:id="@+id/collect_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/collect_record_delete"
+                android:layout_width="@dimen/w_148"
+                android:layout_height="@dimen/h_51"
+                android:text="删除"
+                android:textColor="@color/search_text_selector"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_222"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/delete_button_selector"
+                android:textSize="@dimen/h_27"/>
+
+            <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+                android:layout_below="@+id/collect_record_delete"
+                android:layout_marginTop="@dimen/h_23"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/w_25"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_203"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h_43"
+                android:id="@+id/collect_record_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+            <LinearLayout
+                android:id="@+id/collect_scroll_bg"
+                android:layout_width="@dimen/w_10"
+                android:layout_height="@dimen/h_742"
+                android:orientation="vertical"
+                android:background="@drawable/list_page_scroll_bg"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_119"
+                android:layout_below="@+id/collect_record_delete"
+                android:layout_marginTop="@dimen/h_43">
+
+                <View
+                    android:id="@+id/collect_scroll_bar"
+                    android:layout_width="@dimen/w_10"
+                    android:layout_height="@dimen/h_200"
+                    android:background="@drawable/list_page_scroll_bar"/>
+
+            </LinearLayout>
+
+            <com.open.androidtvwidget.view.MainUpView
+                android:id="@+id/collect_record_upview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/collect_record_pageText"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/h_33"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/w_79"
+                android:textSize="@dimen/h_27"
+                android:textColor="#ffe476"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/collect_no_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_305"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/h_392"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/w_207"
+                android:layout_height="@dimen/h_147"
+                android:focusable="false"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/view_and_collect"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="您还没有收藏过任何课程，赶快去学习吧~!"
+                android:textColor="#ffffff"
+                android:paddingTop="@dimen/h_33"
+                android:textSize="@dimen/h_26"
+                android:layout_gravity="center_horizontal"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/purchuse_record_layout"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_168"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_418"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_78"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_99"
+        android:background="@drawable/shape_corner">
+
+        <include layout="@layout/purchase_record_detail"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connect_us_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_168"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_418"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_78"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_99"
+        android:background="@drawable/shape_corner">
+
+        <include layout="@layout/connect_us_detail"/>
+
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

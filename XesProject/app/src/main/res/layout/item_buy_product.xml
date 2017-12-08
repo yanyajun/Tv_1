@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ReflectItem"
+    android:layout_width="@dimen/w_376"
+    android:layout_height="@dimen/h_691"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:layout_gravity="center"
+    android:background="@drawable/buy_page_item_unselect_shape">
+
+    <ImageView
+        android:id="@+id/top_image"
+        android:layout_width="@dimen/w_259"
+        android:layout_height="@dimen/h_151"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/buy_page_commen_unselect"
+        android:layout_marginTop="@dimen/h_32"
+        android:layout_marginLeft="@dimen/w_64"
+        android:layout_marginRight="@dimen/w_53"/>
+
+    <TextView
+        android:id="@+id/buy_product_reflect_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:typeface="sans"
+        android:textStyle="bold"
+        android:textSize="@dimen/h_29"
+        android:text="小学一年级"
+        android:maxLines="2"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h_33"
+        android:layout_marginLeft="@dimen/h_53"
+        android:layout_marginRight="@dimen/h_53"
+        android:layout_below="@+id/top_image"/>
+
+    <TextView
+        android:id="@+id/buy_product_reflect_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/h_18"
+        android:layout_marginLeft="@dimen/h_53"
+        android:layout_marginRight="@dimen/h_53"
+        android:textColor="#000000"
+        android:typeface="sans"
+        android:textSize="@dimen/h_26"
+        android:text="产品简介： 这里有各种可爱的字母小伙伴，想要和他们一起玩吗？那就赶快加入吧!这里有各种可爱的字母小伙伴，想要和他们一起玩吗？那就赶快加入吧!"
+        android:maxLines="6"
+        android:gravity="left"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/buy_product_reflect_name" />
+
+    <LinearLayout
+        android:id="@+id/price_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buy_product_reflect_detail"
+        android:layout_marginTop="@dimen/h_20"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/buy_product_reflect_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:typeface="sans"
+            android:textSize="@dimen/h_50"
+            android:text="29"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/buy_product_reflect_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ff0000"
+            android:typeface="sans"
+            android:textSize="@dimen/h_24"
+            android:text="元/月"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点击订购"
+        android:textColor="#000000"
+        android:typeface="sans"
+        android:textSize="@dimen/h_27"
+        android:gravity="center"
+        android:layout_below="@+id/price_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/h_11"/>
+
+    <TextView
+        android:id="@+id/buy_product_reflect_words"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/h_15"
+        android:layout_marginRight="@dimen/h_14"
+        android:textColor="#000000"
+        android:typeface="sans"
+        android:textSize="@dimen/h_20"
+        android:text="订购后可观看一年级所有内容"
+        android:gravity="center"
+        android:maxLines="2"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_30"/>
+
+</RelativeLayout>

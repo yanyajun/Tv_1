@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/pop_background"
+        android:orientation="vertical"
+        android:layout_width="@dimen/w_623"
+        android:layout_height="@dimen/h_302"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/view_shape">
+
+        <TextView
+            android:id="@+id/play_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/h_80"
+            android:layout_marginLeft="@dimen/w_110"
+            android:layout_marginRight="@dimen/w_120"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_26"
+            android:lineSpacingExtra="@dimen/h_18"
+            android:text="用户认证信息失败，请重新登录！"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/h_67"
+            android:layout_gravity="center">
+
+            <Button
+                android:id="@+id/retry_login_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:background="@drawable/play_shape"
+                android:textSize="@dimen/h_26"
+                android:text="重新登录"
+               />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

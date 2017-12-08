@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/app_video_box"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical">
+
+
+    <com.dou361.ijkplayer.widget.IjkVideoView
+        android:id="@+id/video_view"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!-- 最大试看时长提示-->
+    <LinearLayout
+        android:id="@+id/app_video_freeTie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#33000000"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="试看时间已到请购买继续观看"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/app_video_freeTie_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="购买"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/app_video_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/load_image"
+            android:layout_width="@dimen/w_190"
+            android:layout_height="@dimen/w_126"
+            android:background="@drawable/load"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <com.dou361.ijkplayer.widget.MarqueeView
+            android:id="@+id/marquee_view"
+            android:layout_width="@dimen/w_233"
+            android:layout_height="@dimen/h_19"
+            android:layout_below="@+id/load_image"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/h_28"
+            android:background="@drawable/marquee_view_background"
+            android:fillViewport="true">
+
+        </com.dou361.ijkplayer.widget.MarqueeView>
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/marquee_view"
+            android:layout_marginTop="@dimen/h_10"
+            android:text="正在飞速加载中..."
+            android:textSize="@dimen/w_23"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:id="@+id/app_video_speed"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/h_10"
+            android:layout_below="@+id/text"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="188Kb/s"
+            android:textSize="@dimen/w_23"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+    <!-- 顶部栏-->
+    <include layout="@layout/simple_player_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_103"
+        android:layout_alignParentTop="true"/>
+    <!-- 底部栏-->
+    <include
+        layout="@layout/simple_player_controlbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_136"
+        android:layout_alignParentBottom="true"/>
+
+
+    <ImageView
+        android:id="@+id/play_icon"
+        android:layout_width="@dimen/w_109"
+        android:layout_height="@dimen/h_109"
+        android:layout_marginLeft="@dimen/h_82"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_157"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/pause_image"/>
+
+    <!--重新播放-->
+    <LinearLayout
+        android:id="@+id/app_video_replay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/play_icon"
+        android:layout_marginTop="@dimen/h_30"
+        android:visibility="gone"
+        android:orientation="vertical">
+        <!-- 播放状态-->
+        <TextView
+            android:id="@+id/app_video_status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/small_problem"
+            android:textColor="#f1f1f1"
+            android:textSize="14dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/play_page_lessons_layout"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/play_page_lessons_name"
+            android:layout_width="@dimen/w_552"
+            android:layout_height="@dimen/h_103"
+            android:paddingTop="@dimen/h_40"
+            android:paddingLeft="@dimen/w_50"
+            android:maxWidth="@dimen/w_278"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="小学二年级语文"
+            android:textSize="@dimen/h_40"
+            android:textColor="#ffffff"
+            android:typeface="sans"
+            android:background="#e5000000"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:clickable="false"/>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/play_page_lessons_list"
+            android:layout_width="@dimen/w_552"
+            android:layout_height="match_parent"
+            android:background="#b2000000"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:clickable="true">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

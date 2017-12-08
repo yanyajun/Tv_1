@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/search_result_layout"
+    android:layout_width="@dimen/w_258"
+    android:layout_height="@dimen/h_351"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <tv.dfyc.yckt.custom.RoundImageView
+        android:id="@+id/search_result_lesson_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:x_radius="@dimen/w_10"
+        app:y_radius="@dimen/h_10"
+        android:src="@drawable/load_detail"/>
+
+    <com.open.androidtvwidget.view.LabelView
+        xmlns:lv="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="@dimen/w_5"
+        android:paddingRight="@dimen/w_5"
+        lv:lv_background_color="@color/red"
+        lv:lv_fill_triangle="true"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_text="免费"
+        lv:lv_text_size="@dimen/w_23"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/search_result_lesson_detail_charge"
+        android:layout_width="@dimen/w_97"
+        android:layout_height="@dimen/h_97"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/free"
+        android:visibility="invisible"/>
+
+    <RelativeLayout
+        android:id="@+id/search_result_mask_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:background="#90061e2d">
+
+        <TextView
+            android:id="@+id/search_result_detail_name"
+            android:layout_width="wrap_content"
+            android:maxWidth="@dimen/w_217"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="小学语文第一张"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h_27"
+            android:paddingTop="@dimen/h_12"
+            android:paddingBottom="@dimen/h_14"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_11"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

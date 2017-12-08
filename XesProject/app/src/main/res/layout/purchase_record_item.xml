@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_68"
+    android:descendantFocusability="beforeDescendants">
+
+    <RelativeLayout
+        android:id="@+id/purchase_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_52"
+        android:layout_height="@dimen/h_68">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_25"
+            android:id="@+id/purchase_record_name"
+            android:layout_width="wrap_content"
+            android:maxWidth="@dimen/w_333"
+            android:layout_height="wrap_content"
+            android:textColor="#f1f1f1"
+            android:singleLine="true"
+            android:textSize="@dimen/h_34"/>
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/purchase_validity_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/h_34"
+            android:textColor="#f1f1f1"
+            android:layout_marginLeft="@dimen/w_455"/>
+
+        <TextView
+            android:id="@+id/purchase_sum"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/h_30"
+            android:textColor="#f1f1f1"
+            android:layout_marginLeft="@dimen/w_786"/>
+
+        <TextView
+            android:id="@+id/purchase__record_state"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:textSize="@dimen/h_30"
+            android:textColor="#f1f1f1"
+            android:layout_marginLeft="@dimen/w_1082"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

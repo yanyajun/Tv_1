@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/detail_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background">
+
+    <TextView
+        android:id="@+id/detail_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="小学"
+        android:textSize="@dimen/w_36"
+        android:textColor="#f1f1f1"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginTop="@dimen/w_40"/>
+
+    <include layout="@layout/timedate"/>
+
+    <LinearLayout
+        android:id="@+id/split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_marginTop="@dimen/h_110"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginRight="@dimen/w_80"
+        android:background="#ffffff"
+        android:alpha="0.2">
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detail_page_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/split"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/h_38"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginRight="@dimen/w_80">
+
+        <tv.dfyc.yckt.custom.RoundImageView
+            android:id="@+id/detail_page_image"
+            android:layout_width="@dimen/w_334"
+            android:layout_height="@dimen/h_460"
+            android:background="@drawable/load_detail"
+            app:x_radius="@dimen/w_8"
+            app:y_radius="@dimen/h_8"/>
+
+        <tv.dfyc.yckt.custom.ListPageLayout
+            android:id="@+id/button_relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/w_64">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/w_20">
+
+                <TextView
+                    android:id="@+id/detail_page_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/h_40"
+                    android:textColor="#f1f1f1"
+                    android:textStyle="bold"
+                    android:typeface="sans"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:id="@+id/detail_page_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_20"
+                    android:textSize="@dimen/h_30"
+                    android:textColor="#ccf1f1f1"
+                    android:typeface="sans"
+                    android:text=""
+                    android:maxLines="2"/>
+
+                <LinearLayout
+                    android:id="@+id/detail_page_div"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/h_21">
+
+                    <TextView
+                        android:id="@+id/tags"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="标签："
+                        android:textSize="@dimen/h_26"
+                        android:textColor="#a7a5b5"/>
+
+                    <TextView
+                        android:id="@+id/detail_lable_tag1"
+                        android:layout_width="@dimen/w_97"
+                        android:layout_height="@dimen/h_40"
+                        android:textSize="@dimen/h_21"
+                        android:textColor="#99f1f1f1"
+                        android:typeface="sans"
+                        android:text="小学"
+                        android:layout_marginLeft="@dimen/w_11"
+                        android:gravity="center"
+                        android:background="@drawable/detail_page_text_border"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/detail_lable_tag2"
+                        android:layout_width="@dimen/w_97"
+                        android:layout_height="@dimen/h_40"
+                        android:textSize="@dimen/h_21"
+                        android:textColor="#99f1f1f1"
+                        android:typeface="sans"
+                        android:text="英语"
+                        android:layout_marginLeft="@dimen/w_20"
+                        android:gravity="center"
+                        android:background="@drawable/detail_page_text_border"
+                        android:visibility="invisible"/>
+
+                    <TextView
+                        android:id="@+id/detail_lable_tag3"
+                        android:layout_width="@dimen/w_97"
+                        android:layout_height="@dimen/h_40"
+                        android:textSize="@dimen/h_21"
+                        android:textColor="#99f1f1f1"
+                        android:typeface="sans"
+                        android:text="拼读"
+                        android:layout_marginLeft="@dimen/w_20"
+                        android:gravity="center"
+                        android:background="@drawable/detail_page_text_border"
+                        android:visibility="invisible"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_page_person_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/h_21">
+
+                    <TextView
+                        android:id="@+id/person"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="主讲："
+                        android:textSize="@dimen/h_26"
+                        android:textColor="#a7a5b5"/>
+
+                    <TextView
+                        android:id="@+id/detail_page_person_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/h_26"
+                        android:textColor="#a7a5b5"
+                        android:typeface="sans"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/detail_page_total_lessons_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/h_31"
+                    android:textSize="@dimen/h_26"
+                    android:textColor="#ffe476"
+                    android:typeface="sans"
+                    android:text=""/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/detail_page_button_play"
+                android:layout_width="@dimen/w_166"
+                android:layout_height="@dimen/h_64"
+                android:text="播放"
+                android:textSize="@dimen/h_26"
+                android:textColor="#ffffff"
+                android:paddingLeft="@dimen/w_20"
+                android:paddingRight="@dimen/w_22"
+                android:drawableLeft="@drawable/detail_page_play"
+                android:drawablePadding="@dimen/w_15"
+                android:background="@drawable/detail_page_button_selector"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/w_20"
+                android:layout_marginBottom="@dimen/h_10"
+                android:nextFocusLeft="@+id/detail_page_button_play"/>
+
+
+            <Button
+                android:id="@+id/detail_page_button_lessons"
+                android:layout_width="@dimen/w_166"
+                android:layout_height="@dimen/h_64"
+                android:text="选集"
+                android:textSize="@dimen/h_26"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="@dimen/w_32"
+                android:paddingLeft="@dimen/w_20"
+                android:paddingRight="@dimen/w_22"
+                android:drawableLeft="@drawable/detail_page_lessons"
+                android:drawablePadding="@dimen/w_15"
+                android:background="@drawable/detail_page_button_selector"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/detail_page_button_play"
+                android:layout_marginBottom="@dimen/h_10"/>
+
+            <Button
+                android:id="@+id/detail_page_button_buy"
+                android:layout_width="@dimen/w_166"
+                android:layout_height="@dimen/h_64"
+                android:text="订购"
+                android:textSize="@dimen/h_26"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="@dimen/w_32"
+                android:paddingLeft="@dimen/w_20"
+                android:paddingRight="@dimen/w_22"
+                android:drawableLeft="@drawable/detail_page_scan"
+                android:drawablePadding="@dimen/w_15"
+                android:background="@drawable/detail_page_button_selector"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/detail_page_button_lessons"
+                android:layout_marginBottom="@dimen/h_10"/>
+
+            <Button
+                android:id="@+id/detail_page_button_save"
+                android:layout_width="@dimen/w_166"
+                android:layout_height="@dimen/h_64"
+                android:text="收藏"
+                android:textSize="@dimen/h_26"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="@dimen/w_32"
+                android:paddingLeft="@dimen/w_20"
+                android:paddingRight="@dimen/w_22"
+                android:drawableLeft="@drawable/detail_page_save"
+                android:drawablePadding="@dimen/w_15"
+                android:background="@drawable/detail_page_button_selector"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@+id/detail_page_button_buy"
+                android:layout_marginBottom="@dimen/h_10"
+                android:nextFocusRight="@+id/detail_page_button_save"/>
+
+        </tv.dfyc.yckt.custom.ListPageLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/select_class_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_page_info_layout"
+        android:layout_marginTop="@dimen/h_62"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/select_class_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选课"
+            android:textSize="@dimen/h_34"
+            android:textColor="#f1f1f1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/h_80"/>
+
+        <LinearLayout
+            android:id="@+id/select_class_split"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_2"
+            android:layout_below="@+id/select_class_name"
+            android:layout_marginTop="@dimen/h_16"
+            android:layout_marginLeft="@dimen/w_80"
+            android:layout_marginRight="@dimen/w_81"
+            android:background="#f1f1f1"
+            android:alpha="0.3">
+        </LinearLayout>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/select_class_info_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_94"
+            android:layout_below="@+id/select_class_split"
+            android:layout_marginTop="@dimen/h_33"
+            android:layout_centerHorizontal="true"
+            android:focusable="false">
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/class_detail_list"
+            android:layout_below="@+id/select_class_split"
+            android:layout_marginTop="@dimen/h_95"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_74"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/h_93"
+            android:focusable="false"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+        <com.open.androidtvwidget.view.MainUpView
+            android:id="@+id/class_detail_upview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/detail_page_guess_like_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/detail_page_info_layout"
+        android:layout_marginTop="@dimen/h_62">
+
+        <TextView
+            android:id="@+id/guess_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="猜你喜欢"
+            android:textSize="@dimen/h_34"
+            android:textColor="#f1f1f1"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/h_80"/>
+
+        <LinearLayout
+            android:id="@+id/guess_like_split"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/h_2"
+            android:layout_below="@+id/guess_like"
+            android:layout_marginTop="@dimen/h_16"
+            android:layout_marginLeft="@dimen/w_80"
+            android:layout_marginRight="@dimen/w_81"
+            android:background="#ffffff"
+            android:alpha="0.2">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_0"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_150">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_0"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_0"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢1"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_0"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_1"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_0"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢2"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_1"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_2"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_1"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢3"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_2"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_3"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_2"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢4"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_3"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_4"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_3"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢5"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_4"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_5"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_4"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢6"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_5"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/guess_like_layout_6"
+            android:layout_width="@dimen/w_188"
+            android:layout_height="@dimen/h_257"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:focusable="true"
+            android:layout_toRightOf="@+id/guess_like_layout_5"
+            android:layout_below="@+id/guess_like_split"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_marginLeft="@dimen/w_51">
+
+            <tv.dfyc.yckt.custom.RoundImageView
+                android:id="@+id/guess_like_image_6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/load_detail"
+                app:x_radius="@dimen/w_8"
+                app:y_radius="@dimen/h_8"/>
+
+            <TextView
+                android:id="@+id/guess_like_name_6"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/h_40"
+                android:layout_weight="4"
+                android:gravity="left|center_vertical"
+                android:text="猜你喜欢7"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_20"
+                android:background="#90061e2d"
+                android:paddingLeft="@dimen/w_10"
+                android:layout_alignParentBottom="true"/>
+
+            <ImageView
+                android:id="@+id/guess_like_free_6"
+                android:layout_width="@dimen/w_80"
+                android:layout_height="@dimen/h_80"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/free"
+                android:visibility="invisible"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:id="@+id/mainUpView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:upImageRes="@drawable/yellow_white_border" />
+
+</RelativeLayout>

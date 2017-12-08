@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <RelativeLayout
+        android:id="@+id/surface_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#222222" />
+
+    <ImageView
+        android:id="@+id/thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        android:scaleType="fitCenter" />
+
+    <LinearLayout
+        android:id="@+id/layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_136"
+        android:layout_alignParentBottom="true"
+        android:background="#50000000"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/current"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_153"
+                android:text="00:00:00"
+                android:textSize="@dimen/h_36"
+                android:typeface="sans"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:focusable="false"
+                android:clickable="false"/>
+
+            <SeekBar
+                android:id="@+id/progress"
+                android:layout_width="@dimen/w_716"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/w_52"
+                android:paddingStart="@dimen/w_20"
+                android:paddingEnd="@dimen/w_20"
+                android:background="@android:color/transparent"
+                android:layout_weight="1"
+                android:splitTrack="false"
+                android:maxHeight="@dimen/h_8"
+                android:minHeight="@dimen/h_8"
+                android:progressDrawable="@drawable/jc_bottom_seek_progress"
+                android:thumb="@drawable/jc_slider_selector"
+                android:focusable="true"
+                android:clickable="true"/>
+
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_36"
+                android:typeface="sans"
+                android:layout_marginLeft="@dimen/w_51"
+                android:gravity="center"
+                android:focusable="false"
+                android:clickable="false"/>
+
+            <LinearLayout
+                android:id="@+id/select_button"
+                android:layout_width="@dimen/w_150"
+                android:layout_height="@dimen/h_60"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/w_203"
+                android:focusable="true"
+                android:clickable="true"
+                android:background="@drawable/jc_play_page_selector">
+
+                <ImageView
+                    android:layout_width="@dimen/w_30"
+                    android:layout_height="@dimen/h_25"
+                    android:background="@drawable/play_page_select"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选课"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/h_40"
+                    android:layout_marginLeft="@dimen/w_21"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/fullscreen"
+            android:layout_width="52.5dp"
+            android:layout_height="fill_parent"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/jc_enlarge"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/bottom_progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_3"
+        android:layout_alignParentBottom="true"
+        android:max="100"
+        android:progressDrawable="@drawable/jc_progress"
+        android:focusable="false"
+        android:clickable="false"/>
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/jc_title_bg"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:paddingLeft="10dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/jc_back" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="@dimen/w_100"
+        android:layout_height="@dimen/w_100"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminateDrawable="@drawable/jc_loading"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="@dimen/w_162"
+        android:layout_height="@dimen/w_162"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/play_page_play"
+        android:focusable="true"
+        android:clickable="true"/>
+
+</RelativeLayout>

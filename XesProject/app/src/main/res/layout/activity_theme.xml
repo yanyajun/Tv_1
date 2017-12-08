@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_specialactivity"
+    android:orientation="vertical">
+
+    <com.open.androidtvwidget.view.RelativeMainLayout
+        android:id="@+id/first_page_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/h_10">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="@dimen/w_228"
+            android:layout_height="@dimen/h_67"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="@dimen/w_80"
+            android:layout_marginTop="@dimen/h_40"
+            android:background="@drawable/first_page_logo_left"
+            android:focusable="false" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/w_528"
+            android:layout_marginTop="@dimen/h_40"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/date_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/h_5"
+                android:focusable="false"
+                android:text="11/13"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_28" />
+
+            <TextView
+                android:id="@+id/time_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_21"
+                android:focusable="false"
+                android:text="15:30"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/w_44" />
+
+            <TextView
+                android:id="@+id/week_theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/w_20"
+                android:layout_marginTop="@dimen/h_5"
+                android:focusable="false"
+                android:text="星期五"
+                android:textColor="#f1f1f1"
+                android:textSize="@dimen/h_28" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ivbt_theme_order"
+            android:layout_width="@dimen/w_106"
+            android:layout_height="@dimen/h_56"
+            android:layout_marginRight="@dimen/h_170"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:background="@drawable/selector_special"
+            android:gravity="center"
+            android:text="订购" />
+
+        <Button
+            android:id="@+id/ivbt_theme_collect"
+            android:layout_width="@dimen/w_106"
+            android:layout_height="@dimen/h_56"
+            android:layout_marginRight="@dimen/h_40"
+            android:layout_marginTop="@dimen/h_46"
+            android:layout_toLeftOf="@+id/logo_right"
+            android:background="@drawable/selector_special"
+            android:gravity="center"
+            android:text="收藏"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/logo_right"
+            android:layout_width="@dimen/w_204"
+            android:layout_height="@dimen/h_53"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/w_79"
+            android:layout_marginTop="@dimen/h_48"
+            android:background="@drawable/first_page_logo_right" />
+
+    </com.open.androidtvwidget.view.RelativeMainLayout>
+
+    <tv.dfyc.yckt.custom.RoundImageView
+        android:id="@+id/iv_theme_ad"
+        android:layout_width="@dimen/w_1758"
+        android:layout_height="@dimen/h_360"
+        android:layout_marginLeft="@dimen/w_96"
+        android:layout_marginRight="@dimen/w_66"
+        android:layout_marginTop="@dimen/h_15" />
+
+    <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+        android:id="@+id/rv_theme_content"
+        android:layout_width="@dimen/w_1798"
+        android:layout_height="@dimen/h_560"
+        android:layout_marginLeft="@dimen/w_76"
+        android:layout_marginRight="@dimen/w_46"
+        android:layout_marginTop="@dimen/h_15"
+        android:padding="@dimen/h_10" />
+
+    <!--<com.open.androidtvwidget.view.MainUpView21-->
+    <!--android:id="@+id/mainUpView_theme"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content" />-->
+
+</LinearLayout>

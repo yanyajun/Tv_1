@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/buy_page_commen_bg">
+
+    <include
+        android:id="@+id/titlebar_time"
+        layout="@layout/titlebar_time_center"/>
+
+    <LinearLayout
+        android:id="@+id/split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_marginTop="@dimen/h_110"
+        android:layout_marginLeft="@dimen/w_80"
+        android:layout_marginRight="@dimen/w_80"
+        android:background="#f1f1f1"
+        android:alpha="0.3">
+    </LinearLayout>
+
+
+    <com.open.androidtvwidget.view.SmoothHorizontalScrollView
+        android:id="@+id/buy_page_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        android:clickable="true"
+        android:layout_below="@+id/split"
+        android:layout_marginTop="@dimen/h_60"
+        android:layout_marginLeft="@dimen/w_480"
+        android:layout_marginRight="@dimen/w_480"
+        android:layout_marginBottom="@dimen/h_56"
+        android:layout_above="@+id/info_text">
+
+        <LinearLayout
+            android:id="@+id/buy_page_scroll_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:clickable="true">
+
+        </LinearLayout>
+
+    </com.open.androidtvwidget.view.SmoothHorizontalScrollView>
+
+    <TextView
+        android:id="@+id/info_text"
+        android:layout_width="@dimen/w_1380"
+        android:layout_height="wrap_content"
+        android:text="如订购连续包月,则当日定当月扣,扣费按自然月计算,下月起自动续订。如1日-15日退订,则会员有效期截止月底,如16日以后退订,则会员有效期延顺至订购之日起的第一个自然月。"
+        android:textColor="@color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/h_52"
+        android:gravity="center"/>
+
+    <com.open.androidtvwidget.view.MainUpView
+        android:id="@+id/buy_page_product_upview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

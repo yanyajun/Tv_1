@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/h_210"
+    android:layout_marginLeft="@dimen/w_591">
+
+        <RelativeLayout
+            android:id="@+id/popBackground"
+            android:layout_width="@dimen/w_741"
+            android:layout_height="@dimen/h_576"
+            android:background="@drawable/fail_purchase">
+
+                <TextView
+                    android:id="@+id/popText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/h_35"
+                    android:textColor="#f1f1f1"
+                    android:layout_marginTop="@dimen/h_280"
+                    android:layout_marginLeft="@dimen/w_101"
+                    android:layout_marginRight="@dimen/w_100"/>
+
+                <Button
+                    android:id="@+id/popCancel"
+                    android:layout_width="@dimen/w_191"
+                    android:layout_height="@dimen/h_71"
+                    android:layout_below="@+id/popText"
+                    android:background="@drawable/pop_dialog_button_selector"
+                    android:layout_marginTop="@dimen/h_76"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="@dimen/w_157"
+                    android:text="取消"
+                    android:textSize="@dimen/h_35"
+                    android:typeface="sans"
+                    android:textColor="@color/pop_dialog_text_selector"/>
+
+                <Button
+                    android:id="@+id/popOK"
+                    android:layout_width="@dimen/w_191"
+                    android:layout_height="@dimen/h_71"
+                    android:background="@drawable/pop_dialog_button_selector"
+                    android:layout_below="@+id/popText"
+                    android:layout_marginTop="@dimen/h_76"
+                    android:layout_toRightOf="@+id/popCancel"
+                    android:layout_marginLeft="@dimen/w_45"
+                    android:text="确认"
+                    android:textSize="@dimen/h_35"
+                    android:typeface="sans"
+                    android:textColor="@color/pop_dialog_text_selector"/>
+
+        </RelativeLayout>
+
+
+
+
+</RelativeLayout>

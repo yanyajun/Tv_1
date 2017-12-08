@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/play_page_one_lesson_layout"
+    android:layout_width="@dimen/w_552"
+    android:layout_height="@dimen/h_72"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="@drawable/play_lessons_selector">
+
+    <TextView
+        android:id="@+id/play_page_one_lesson_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_101"
+        android:text="小学文言文"
+        android:maxWidth="@dimen/w_405"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:singleLine="true"
+        android:textSize="@dimen/h_30"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/play_page_item"
+        android:layout_toRightOf="@+id/play_page_one_lesson_name"
+        android:layout_centerVertical="true"
+        android:visibility="gone"/>
+
+</RelativeLayout>

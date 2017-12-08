@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/guess_like_layout"
+    android:layout_width="@dimen/w_224"
+    android:layout_height="@dimen/h_308"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <tv.dfyc.yckt.custom.RoundImageView
+        android:id="@+id/guess_like_lesson_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:x_radius="@dimen/w_10"
+        app:y_radius="@dimen/h_10"
+        android:scaleType="fitXY"
+        android:src="@drawable/load_detail"/>
+
+    <com.open.androidtvwidget.view.LabelView
+        xmlns:lv="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/w_5"
+        android:paddingRight="@dimen/w_5"
+        lv:lv_background_color="@color/red"
+        lv:lv_fill_triangle="true"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_text="免费"
+        lv:lv_text_size="@dimen/w_23"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/guess_like_lesson_detail_charge"
+        android:layout_width="@dimen/w_97"
+        android:layout_height="@dimen/h_97"
+        android:layout_gravity="right"
+        android:background="@drawable/free"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_62"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#90061e2d">
+
+        <TextView
+            android:id="@+id/guess_like_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h_62"
+            android:maxWidth="@dimen/w_254"
+            android:singleLine="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:gravity="left|center_vertical"
+            android:text="小学语文第一张"
+            android:maxLines="2"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h_20"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_11"/>
+
+    </LinearLayout>
+</FrameLayout>

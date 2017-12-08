@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/theme_detail_layout"
+    android:layout_width="@dimen/w_542"
+    android:layout_height="@dimen/h_324"
+    android:layout_gravity="center"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <ImageView
+        android:id="@+id/theme_lesson_detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/load_theme"/>
+
+    <com.open.androidtvwidget.view.LabelView
+        xmlns:lv="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/theme_lesson_detail_charge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:paddingLeft="@dimen/w_5"
+        android:paddingRight="@dimen/w_5"
+        lv:lv_background_color="@color/red"
+        lv:lv_fill_triangle="true"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_text="免费"
+        lv:lv_text_size="@dimen/w_23"
+        android:visibility="invisible"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_68"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:background="#90061e2d">
+
+        <TextView
+            android:id="@+id/theme_detail_name"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_68"
+            android:layout_weight="4"
+            android:gravity="left|center_vertical"
+            android:text="小学语文第一张"
+            android:maxLines="2"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/h_26"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/w_40"/>
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/h_68"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/w_37">
+
+            <TextView
+                android:id="@+id/theme_detail_times"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/h_68"
+                android:gravity="right|center_vertical"
+                android:text="1024次"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/h_22"
+                android:layout_alignParentRight="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/primary_eye"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/theme_detail_times"
+                android:layout_marginRight="@dimen/w_22"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

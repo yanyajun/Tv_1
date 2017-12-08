@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hot_search_item"
+    android:layout_width="@dimen/w_412"
+    android:layout_height="@dimen/w_59"
+    android:background="@drawable/select_shape_selector"
+    android:focusableInTouchMode="true"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/course_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:maxWidth="@dimen/w_352"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:ellipsize="marquee"
+        android:textSize="@dimen/h_20"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:text="小学二年级语文文言文"/>
+
+    <ImageView
+        android:id="@+id/corner_iamge"
+        android:visibility="gone"
+        android:layout_width="@dimen/w_46"
+        android:layout_height="@dimen/w_46"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_2"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/h_2"
+        android:src="@drawable/corner"/>
+
+    <TextView
+        android:id="@+id/corner_text"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        android:textSize="@dimen/h_16"
+        android:layout_alignParentRight="true"
+        android:text="免费"/>
+
+</RelativeLayout>

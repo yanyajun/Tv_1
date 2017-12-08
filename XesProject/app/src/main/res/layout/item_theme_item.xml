@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.dfyc.yckt.custom.OpenCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:layout_width="@dimen/w_275"
+    android:layout_height="@dimen/h_370"
+    android:layout_margin="10dp"
+    android:background="@color/transparent"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="5dp">
+
+    <tv.dfyc.yckt.custom.RoundImageView
+        android:id="@+id/iv_content"
+        android:layout_width="@dimen/w_255"
+        android:layout_height="@dimen/h_350"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="@dimen/w_255"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/h_1"
+            android:layout_marginLeft="@dimen/w_2"
+            android:background="@drawable/first_page_text_round_bg"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/h_14"
+            android:paddingLeft="@dimen/w_10"
+            android:paddingTop="@dimen/h_12"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h_28" />
+    </RelativeLayout>
+
+</tv.dfyc.yckt.custom.OpenCardView>

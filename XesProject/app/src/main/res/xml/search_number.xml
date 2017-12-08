@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 全键盘-26-字母 -->
+<Keyboard
+    bg_res="@color/transparent"
+    key_height="@dimen/h_54"
+    key_width="@dimen/w_58"
+    key_right_padding="@dimen/w_66"
+    key_left_padding="@dimen/w_1"
+    key_select_res="@drawable/keyboard_shape"
+    key_text_color="#f1f1f1"
+    key_text_size="@dimen/w_32"
+    key_top_padding="@dimen/h_17"
+    key_bottom_padding="@dimen/h_17"
+    left_right_move="true"
+    qwerty="true"
+    qwerty_uppercase="false"
+    top_bottom_move="true" >
+
+    <!-- 第一行 -->
+
+    <!-- 第一行 -->
+    <row>
+
+        <key
+            key_code="251"
+            key_label="ABC/123"
+            key_width="@dimen/w_109"
+            key_height="@dimen/w_54"
+            key_text_size="@dimen/w_24"
+            key_right_padding="@dimen/w_52"
+            key_bg_res="@drawable/key_bg_rectangle"/>
+
+        <key
+            key_code="67"
+            key_bg_res="@drawable/key_bg_rectangle"
+            key_right_padding="@dimen/w_52"
+            key_label="退格"
+            key_width="@dimen/w_71"
+            key_height="@dimen/w_54"
+            key_text_size="@dimen/w_24" />
+
+        <key
+            key_bg_res="@drawable/key_bg_rectangle"
+            key_code="28"
+            key_label="清空"
+            key_width="@dimen/w_71"
+            key_text_size="@dimen/w_24"
+            key_height="@dimen/w_54"
+            />
+    </row>
+
+    <row>
+        <keys
+            codes="8|9|10|11|12|13"
+            labels="1|2|3|4|5|6"
+            splitter="|" />
+
+    </row>
+
+    <row>
+        <keys
+            codes="14|15|16|7"
+            labels="7|8|9|0"
+            splitter="|" />
+
+    </row>
+
+
+</Keyboard>

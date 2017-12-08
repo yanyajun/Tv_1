@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/ll_bottom_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/h_136"
+    android:background="@drawable/background_shape"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:gravity="center_vertical">-->
+
+    <TextView
+        android:id="@+id/app_video_currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w_80"
+        android:text="00:00"
+        android:gravity="center"
+        android:textSize="@dimen/h_36"
+        android:textColor="#f1f1f1"
+        android:focusable="false"
+        android:clickable="false"/>
+
+    <SeekBar
+        android:id="@+id/app_video_seekBar"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/w_20"
+        android:paddingStart="@dimen/w_20"
+        android:paddingEnd="@dimen/w_20"
+        android:paddingBottom="@dimen/h_20"
+        android:maxHeight="@dimen/h_18"
+        android:minHeight="@dimen/h_18"
+        android:gravity="center"
+        android:thumbOffset="0dip"
+        android:progressDrawable="@drawable/seek_progress"
+        android:thumb="@drawable/seekbar_thumb"
+        android:focusable="false"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/app_video_endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/h_36"
+        android:layout_marginLeft="@dimen/w_20"
+        android:paddingRight="@dimen/w_79"
+        android:gravity="center"
+        android:focusable="false"
+        android:clickable="false"/>
+
+
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

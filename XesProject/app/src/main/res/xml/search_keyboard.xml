@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android">
+    <Keyboard
+        bg_res="@color/transparent"
+        key_height="@dimen/h_54"
+        key_width="@dimen/w_58"
+        key_right_padding="@dimen/w_66"
+        key_left_padding="@dimen/w_1"
+        key_select_res="@drawable/keyboard_shape"
+        key_text_color="#f1f1f1"
+        key_text_size="@dimen/w_32"
+        key_top_padding="@dimen/h_17"
+        key_bottom_padding="@dimen/h_17"
+        left_right_move="true"
+        qwerty="true"
+        qwerty_uppercase="false"
+        top_bottom_move="true">
+
+        <!-- 第一行 -->
+        <row>
+
+            <key
+                key_code="250"
+                key_label="ABC/123"
+                key_width="@dimen/w_109"
+                key_height="@dimen/w_54"
+                key_text_size="@dimen/w_24"
+                key_right_padding="@dimen/w_52"
+                key_bg_res="@drawable/key_bg_rectangle"
+         />
+
+            <key
+                key_code="67"
+                key_bg_res="@drawable/key_bg_rectangle"
+                key_right_padding="@dimen/w_52"
+                key_label="退格"
+                key_width="@dimen/w_71"
+                key_height="@dimen/w_54"
+                key_text_size="@dimen/w_24"/>
+
+            <key
+                key_bg_res="@drawable/key_bg_rectangle"
+                key_code="28"
+                key_label="清空"
+                key_width="@dimen/w_71"
+                key_text_size="@dimen/w_24"
+                key_height="@dimen/w_54"
+
+                />
+        </row>
+
+
+        <row>
+            <keys
+                codes="29|30|31|32|33|34"
+                labels="A|B|C|D|E|F"
+                splitter="|" />
+        </row>
+
+        <!-- 第二行 -->
+        <row>
+            <keys
+                codes="35|36|37|38|39|40"
+                labels="G|H|I|J|K|L"
+                splitter="|" />
+        </row>
+
+        <row>
+            <keys
+                codes="41|42|43|44|45|46"
+                labels="M|N|O|P|Q|R"
+                splitter="|" />
+        </row>
+
+        <row>
+            <keys
+                codes="47|48|49|50|51|52"
+                labels="S|T|U|V|W|X"
+                splitter="|" />
+        </row>
+
+        <row>
+            <keys
+                codes="53|54"
+                labels="Y|Z"
+                splitter="|" />
+        </row>
+
+
+    </Keyboard>
+</Keyboard>

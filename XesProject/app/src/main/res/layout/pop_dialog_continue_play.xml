@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/pop_background"
+        android:orientation="vertical"
+        android:layout_width="@dimen/w_623"
+        android:layout_height="@dimen/h_322"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
+        android:background="@drawable/view_shape">
+
+        <TextView
+            android:id="@+id/play_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_55"
+            android:layout_marginLeft="@dimen/w_67"
+            android:layout_marginRight="@dimen/w_67"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_26"
+            android:lineSpacingExtra="@dimen/h_18"
+            android:text="您已经观看到20:22分钟，是否继续观看？"
+            android:gravity="center"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_49"
+            android:layout_marginLeft="@dimen/w_161">
+
+            <Button
+                android:id="@+id/pop_continue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/search_text_selector"
+                android:textSize="@dimen/h_26"
+                android:text="继续"
+                android:background="@drawable/play_selector"/>
+
+            <Button
+                android:id="@+id/pop_restart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/search_text_selector"
+                android:layout_marginLeft="@dimen/w_35"
+                android:textSize="@dimen/h_26"
+                android:text="重头"
+                android:background="@drawable/play_selector"/>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

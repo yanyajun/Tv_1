@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/search_background"
+    tools:context="tv.dfyc.yckt.detail.ProductListActivity">
+
+    <include
+        android:id="@+id/titlebar_time"
+        layout="@layout/titlebar_time_center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlebar_time"
+        android:layout_marginTop="@dimen/h_60"
+        android:layout_marginLeft="@dimen/w_150"
+        android:layout_marginRight="@dimen/w_150"
+        android:layout_marginBottom="@dimen/h_40"
+        android:background="@drawable/productlist_bg"
+        android:orientation="vertical">
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:id="@+id/gv_product_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/w_120"
+            android:layout_marginTop="@dimen/h_30"
+            android:layout_marginBottom="@dimen/h_59"
+            android:layout_marginRight="@dimen/w_120"/>
+
+        <com.open.androidtvwidget.view.MainUpView
+            android:id="@+id/product_list_upview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/scroll_productlist_bg"
+            android:layout_width="@dimen/w_10"
+            android:layout_height="@dimen/h_749"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/h_210"
+            android:layout_marginTop="@dimen/h_217"
+            android:background="@drawable/list_page_scroll_bg"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/scroll_productlist_bar"
+                android:layout_width="@dimen/w_10"
+                android:layout_height="@dimen/h_200"
+                android:background="@drawable/list_page_scroll_bar" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/page_productlist_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/h_65"
+        android:layout_marginRight="@dimen/w_210"
+        android:singleLine="true"
+        android:textColor="#e4cb68"
+        android:textSize="@dimen/h_27" />
+
+
+
+</RelativeLayout>

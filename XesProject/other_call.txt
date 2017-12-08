@@ -1,0 +1,13 @@
+
+统一搜索：
+包名:  tv.dfyc.yckt
+类名:  tv.dfyc.yckt.detail.DetailActivity
+参数：
+1、key: ContentID  value:资源ID
+
+
+广告推荐位：
+包名:  tv.dfyc.yckt
+类名:  tv.dfyc.yckt.MainActivity
+参数：
+1、key: which_page  value: 2（小学） ，3（初中） ，4（高中）

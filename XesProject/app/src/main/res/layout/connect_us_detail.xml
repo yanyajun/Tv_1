@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/connect_us_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/app_version_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_52"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_68">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/h_36"
+            android:textColor="#f1f1f1"
+            android:text="当前版本:"/>
+
+         <TextView
+             android:id="@+id/version"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:textColor="#f1f1f1"
+             android:textSize="28px"
+             android:layout_marginLeft="@dimen/w_42"
+             android:text="V 1.0.0"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/connect_us_split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_below="@+id/app_version_info"
+        android:layout_marginTop="@dimen/h_17"
+        android:layout_marginLeft="@dimen/w_68"
+        android:layout_marginRight="@dimen/w_68"
+        android:background="#f1f1f1"
+        android:alpha="0.3">
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/us_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/connect_us_split"
+        android:layout_marginTop="@dimen/h_73"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_71"
+        android:layout_marginRight="@dimen/w_119"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_262"
+        android:layout_alignParentRight="true"/>
+
+
+
+</RelativeLayout>

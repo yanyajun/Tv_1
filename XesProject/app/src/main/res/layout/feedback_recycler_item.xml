@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/checkBox_relativelayout"
+        android:focusable="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:layout_width="@dimen/w_51"
+        android:layout_height="@dimen/h_46"
+        android:background="@drawable/checkbox_selector">
+
+        <RelativeLayout
+            android:id="@+id/checkBox_select_image"
+            android:layout_width="@dimen/w_32"
+            android:layout_height="@dimen/h_28"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_12">
+
+        </RelativeLayout>
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:focusable="false"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="@dimen/h_10"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/h_28"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            style="@style/myCheckBox"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/checkBox_text"
+        android:paddingLeft="@dimen/w_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#333333"
+        android:textSize="@dimen/w_30"/>
+
+</LinearLayout>

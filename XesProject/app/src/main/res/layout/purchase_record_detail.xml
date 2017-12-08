@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/purchase_detail"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/purchase_detail_name"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="@dimen/h_42"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_93"
+        android:gravity="center_vertical"
+        android:alpha="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="产品包名称"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_38"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_244"
+            android:text="有效期"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_38"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_208"
+            android:text="资费"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_38"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/w_238"
+            android:text="状态"
+            android:textColor="#f1f1f1"
+            android:textSize="@dimen/h_38"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/purchase_detail_split"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/h_2"
+        android:layout_below="@+id/purchase_detail_name"
+        android:layout_marginTop="@dimen/h_30"
+        android:layout_marginLeft="@dimen/w_69"
+        android:layout_marginRight="@dimen/w_100"
+        android:background="#f1f1f1"
+        android:alpha="0.3">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/purchase_no_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="@dimen/w_207"
+            android:layout_height="@dimen/h_147"
+            android:focusable="false"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/purchase_background"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您还没有订购过任何产品哦，赶快去订购吧~!"
+            android:textColor="#ffffff"
+            android:paddingTop="@dimen/h_33"
+            android:textSize="@dimen/h_26"
+            android:layout_gravity="center_horizontal"/>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:layout_below="@+id/purchase_detail_split"
+        android:layout_marginTop="@dimen/h_32"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/w_68"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_39"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.open.androidtvwidget.leanback.recycle.RecyclerViewTV
+            android:scrollbars="vertical"
+            android:scrollbarTrackVertical="@drawable/track_vertical"
+            android:scrollbarThumbVertical="@drawable/my_bar"
+            android:scrollbarStyle="insideInset"
+            android:scrollbarSize="@dimen/w_11"
+            android:fadeScrollbars="false"
+            android:id="@+id/purchase_recycler_view"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/h_50"
+            android:layout_alignParentRight="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </com.open.androidtvwidget.leanback.recycle.RecyclerViewTV>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/purchase_pageText"
+        android:text=""
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/h_8"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/w_47"
+        android:textSize="@dimen/h_27"
+        android:textColor="#ffe476"/>
+
+</RelativeLayout>

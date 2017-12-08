@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_products"
+    android:layout_width="@dimen/w_614"
+    android:layout_height="@dimen/h_243"
+    android:background="@drawable/productlist_item_bg"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_productlist_cover"
+        android:layout_width="@dimen/w_154"
+        android:layout_height="@dimen/h_214"
+        android:layout_marginBottom="@dimen/h_16"
+        android:layout_marginLeft="@dimen/w_50"
+        android:layout_marginTop="@dimen/h_15" />
+
+    <TextView
+        android:id="@+id/tv_productlist_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/w_42"
+        android:layout_marginTop="@dimen/h_33"
+        android:layout_toRightOf="@id/iv_productlist_cover"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/h_33"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_productlist_price_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_productlist_title"
+        android:layout_marginLeft="@dimen/w_42"
+        android:layout_marginTop="@dimen/h_27"
+        android:layout_toRightOf="@id/iv_productlist_cover"
+        android:maxLines="1"
+        android:text="价格："
+        android:textColor="#FFF330"
+        android:textSize="@dimen/h_22" />
+
+
+    <TextView
+        android:id="@+id/tv_productlist_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_productlist_title"
+        android:layout_marginTop="@dimen/h_27"
+        android:layout_toRightOf="@id/tv_productlist_price_left"
+        android:maxLines="1"
+        android:text="30"
+        android:textColor="#FFF330"
+        android:textSize="@dimen/h_22" />
+
+    <TextView
+        android:id="@+id/tv_productlist_price_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_productlist_title"
+        android:layout_marginTop="@dimen/h_27"
+        android:layout_toRightOf="@id/tv_productlist_price"
+        android:maxLines="1"
+        android:text="元/月"
+        android:textColor="#FFF330"
+        android:textSize="@dimen/h_22" />
+
+
+    <TextView
+        android:id="@+id/tv_productlist_orderstate"
+        android:layout_width="@dimen/w_320"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_productlist_price"
+        android:layout_marginLeft="@dimen/w_42"
+        android:layout_marginTop="@dimen/h_20"
+        android:layout_toRightOf="@id/iv_productlist_cover"
+        android:maxLines="2"
+        android:text="订购状态"
+        android:textColor="#FFFFFF"
+        android:textSize="@dimen/h_24" />
+
+</RelativeLayout>

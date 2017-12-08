@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tv.dfyc.yckt.custom.OpenCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item"
+    android:focusable="false"
+    android:layout_width="@dimen/w_1762"
+    android:layout_height="@dimen/h_360">
+
+    <ImageView
+        android:id="@+id/iv_theme_top"
+        android:layout_width="@dimen/w_1762"
+        android:layout_height="@dimen/h_360"
+        android:layout_gravity="center_horizontal" />
+
+</tv.dfyc.yckt.custom.OpenCardView>
